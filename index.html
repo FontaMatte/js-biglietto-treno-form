@@ -8,6 +8,23 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
+        <label for="userName">Nome Cognome</label>
+        <input type="text" id="userName" name="nomeCognome">
+
+        <label for="kmRange">Km da percorere</label>
+        <input type="text" id='kmRange'>
+
+        <label for='userAge'>Fascia d'eta'</label>
+        <select id='userAge'>
+        <option value="meno18">Meno di 18</option>
+        <option value="18-65"> Tra 18 e 65 </option>
+        <option value="piu65"> Piu' di 65</option>
+        </select>
+
+        <button id="submit-button">GENERA</button>
+
+        <div id="userTicket"></div>
+
         <script src="js/script.js"></script>
     </body>
 </html>
