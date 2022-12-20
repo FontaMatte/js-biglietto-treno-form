@@ -8,22 +8,67 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <label for="userName">Nome Cognome</label>
-        <input type="text" id="userName" name="nomeCognome">
+        <div class="container">
+            <h2>
+                CALCOLA IL PREZZO DEL TUO BIGLIETTO
+            </h2>
+            <div class="input-dati d-flex">
+                <div class="name d-flex d-flex-column">
+                    <label for="userName">Nome Cognome</label>
+                    <input type="text" id="userName" name="nomeCognome">
+                </div>
 
-        <label for="kmRange">Km da percorere</label>
-        <input type="text" id='kmRange'>
+                <div class="km d-flex d-flex-column">
+                    <label for="kmRange">Km da percorere</label>
+                    <input type="text" id='kmRange'>
+                </div>
 
-        <label for='userAge'>Fascia d'eta'</label>
-        <select id='userAge'>
-        <option value="meno18">Meno di 18</option>
-        <option value="18-65"> Tra 18 e 65 </option>
-        <option value="piu65"> Piu' di 65</option>
-        </select>
-
-        <button id="submit-button">GENERA</button>
-
-        <div id="userTicket"></div>
+                <div class="age d-flex d-flex-column">
+                    <label for='userAge'>Fascia d'eta'</label>
+                    <select id='userAge'>
+                        <option value="meno18">Meno di 18</option>
+                        <option value="18-65"> Tra 18 e 65 </option>
+                        <option value="piu65"> Piu' di 65</option>
+                    </select>
+                </div>
+                <div class="button-container">
+                    <button id="submit-button">GENERA</button>
+                    <button id="submit-button">ANNULLA</button>
+                </div>
+            </div> 
+            
+            <h2>
+                IL TUO BIGLIETTO
+            </h2>
+            <div class="ticket-container">
+                <h3>
+                    DETTAGLIO PASEGGERI
+                </h3>
+                <div class="ticket-content d-flex">
+                    <div class="ticket-left">
+                        <h4>
+                            NOME PASEGGERO
+                        </h4>
+                        <span id="passengerName"></span>
+                    </div>
+                    <div class="ticket-right">
+                        <table>
+                            <tr>
+                              <th>Offerta</th>
+                              <th>Carrozza</th>
+                              <th>Codice CP</th>
+                              <th>Costo biglietto</th>
+                            </tr>
+                            <tr>
+                              <td>Alfreds Futterkiste</td>
+                              <td>Maria Anders</td>
+                              <td>Germany</td>
+                              <td id="userTicketPrice"></td>
+                            </tr>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <script src="js/script.js"></script>
     </body>

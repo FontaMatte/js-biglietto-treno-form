@@ -1,13 +1,17 @@
 // Dichiaro e Inizializzo le variabii
+// Variabili Input
 const userName = document.getElementById('userName');
 const kmRange = document.getElementById('kmRange');
 const userAge = document.getElementById('userAge');
 const submitButton = document.getElementById('submit-button');
-const userTicket = document.getElementById('userTicket')
 const kmPrice = 0.21;
 const minorsDiscount = 0.2;
 const elderyDiscount = 0.4;
+
+// Variabili Output
+const userTicketPrice = document.getElementById('userTicketPrice');
 let ticketPrice;
+const passengerName = document.getElementById('passengerName');
 
 // Funzione che all'evento 'click' calcola il prezzo del biglietto in base all'eta'
 submitButton.addEventListener('click', 
@@ -33,9 +37,14 @@ submitButton.addEventListener('click',
 
         // Stampo in HTML il risultato
         ticketPrice = ticketPrice.toFixed(2); //arrotondo a 2 cifre decimali
-        userTicket.innerHTML = `Il costo del biglietto e' di: €${ticketPrice}`;
+        userTicketPrice.innerHTML = `€${ticketPrice}`;
+
+        passengerName.innerHTML = `${userName.value}`;
     }
 )    
+
+
+
 
         
 
