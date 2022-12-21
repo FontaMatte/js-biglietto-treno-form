@@ -36,23 +36,25 @@ submitButton.addEventListener('click',
             ticketPrice = kmPrice * kmRange.value;
         }
         
-        else if (userAge.value == "scegli") 
+        else { //if (userAge.value == "scegli")
             alert("inserisci prima una fascia di eta'");
-        
+        }
 
         // Stampo in HTML il risultato
         ticketPrice = ticketPrice.toFixed(2); //arrotondo a 2 cifre decimali
         userTicketPrice.innerHTML = `€${ticketPrice}`;
 
-        passengerName.innerHTML = `${userName.value}`;
+        passengerName.innerHTML = `${userName.value}`; //stampo in HTML il nome del passegero
     }
 )    
 
+// Button per resettare gli input
 resetButton.addEventListener('click',
         function() {
-            document.getElementById('userName').value = "";
-            document.getElementById('kmRange').value = "";
-            document.getElementById('userAge').value = "scegli";
+
+            userName.value = "";
+            kmRange.value = "";
+            userAge.value = "scegli";
         }
 )
 

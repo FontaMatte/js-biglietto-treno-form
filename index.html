@@ -12,17 +12,22 @@
             <h2>
                 CALCOLA IL PREZZO DEL TUO BIGLIETTO
             </h2>
+
+            <!-- Form inserimento dati -->
             <div class="input-dati d-flex">
+
+                <!-- Input nome cognome -->
                 <div class="name d-flex d-flex-column">
                     <label for="userName">Nome Cognome</label>
-                    <input type="text" id="userName" >
+                    <input type="text" id="userName">
                 </div>
 
+                <!-- Input Kilometri -->
                 <div class="km d-flex d-flex-column">
                     <label for="kmRange">Km da percorere</label>
-                    <input type="text" id='kmRange'>
+                    <input type="number" id='kmRange'>
                 </div>
-
+                <!-- Input eta' -->
                 <div class="age d-flex d-flex-column">
                     <label for='userAge'>Fascia d'eta'</label>
                     <select id='userAge'>
@@ -32,12 +37,14 @@
                         <option value="piu65"> Piu' di 65</option>
                     </select>
                 </div>
+                <!-- Bottoni -->
                 <div class="button-container">
                     <button id="submit-button">GENERA</button>
                     <button id="reset-button">ANNULLA</button>
                 </div>
             </div> 
             
+            <!-- Biglietto del treno -->
             <h2>
                 IL TUO BIGLIETTO
             </h2>
