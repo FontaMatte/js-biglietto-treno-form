@@ -14,7 +14,7 @@
             </h2>
 
             <!-- Form inserimento dati -->
-            <div class="input-dati d-flex">
+            <form class="input-dati d-flex">
 
                 <!-- Input nome cognome -->
                 <div class="name d-flex d-flex-column">
@@ -39,10 +39,10 @@
                 </div>
                 <!-- Bottoni -->
                 <div class="button-container">
-                    <button id="submit-button">GENERA</button>
-                    <button id="reset-button">ANNULLA</button>
+                    <button type="button" id="submit-button">GENERA</button>
+                    <button type="button" id="reset-button">ANNULLA</button>
                 </div>
-            </div> 
+            </form> 
             
             <!-- Biglietto del treno -->
             <h2>
@@ -68,9 +68,9 @@
                               <th>Costo biglietto</th>
                             </tr>
                             <tr>
-                              <td>Alfreds Futterkiste</td>
-                              <td>Maria Anders</td>
-                              <td>Germany</td>
+                              <td id="offer-type"></td>
+                              <td id="couch-number"></td>
+                              <td id="cp"></td>
                               <td id="userTicketPrice"></td>
                             </tr>
                         </table>    

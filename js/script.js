@@ -13,6 +13,9 @@ const elderyDiscount = 0.4;
 const userTicketPrice = document.getElementById('userTicketPrice');
 let ticketPrice;
 const passengerName = document.getElementById('passengerName');
+let couchNumber = document.getElementById('couch-number');
+let CP = document.getElementById('cp');
+let OfferType = document.getElementById('offer-type');
 
 // Funzione che all'evento 'click' calcola il prezzo del biglietto in base all'eta'
 submitButton.addEventListener('click', 
@@ -45,6 +48,15 @@ submitButton.addEventListener('click',
         userTicketPrice.innerHTML = `€${ticketPrice}`;
 
         passengerName.innerHTML = `${userName.value}`; //stampo in HTML il nome del passegero
+
+        // genero e scrivo in HTML un numero di carrozza casuale tra 1 e 9
+        const randomCouchNumber = Math.floor(Math.random() * 10) + 1 ;
+        couchNumber.innerHTML = `${randomCouchNumber}`;
+
+        // genero e scrivo in HTML un numero CP casuale tra 90000 e 99000
+        const randomCP = Math.floor(Math.random() * (99000 - 90000 + 1)) + 90000;
+        CP.innerHTML = `${randomCP}`;
+
     }
 )    
 
@@ -57,6 +69,7 @@ resetButton.addEventListener('click',
             userAge.value = "scegli";
         }
 )
+
 
 
 
